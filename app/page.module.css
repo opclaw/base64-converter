@@ -1,0 +1,227 @@
+.main {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 24px;
+  background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tool {
+  padding: 40px 24px;
+}
+
+.toolContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.modeSwitch {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.modeSwitch button {
+  flex: 1;
+  padding: 16px;
+  background: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modeSwitch button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.inputType {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.inputType button {
+  flex: 1;
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.inputType button.active {
+  background: #e3f2fd;
+  border-color: #1976d2;
+  color: #1976d2;
+}
+
+.inputArea {
+  margin-bottom: 24px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.fileInput {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+}
+
+.fileInput input {
+  display: none;
+}
+
+.fileInput label {
+  display: block;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.primaryBtn {
+  flex: 1;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  padding: 14px 24px;
+  background: white;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.error {
+  padding: 16px;
+  background: #fee;
+  color: #c33;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.outputSection {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.outputHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.outputHeader label {
+  font-weight: 600;
+}
+
+.outputHeader button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.copyBtn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.downloadBtn {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.outputTextarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  border: none;
+  font-family: monospace;
+  font-size: 14px;
+  background: #f8f9fa;
+  resize: vertical;
+}
+
+.stats {
+  padding: 12px 16px;
+  background: #f0f0f0;
+  font-size: 12px;
+  color: #666;
+}
