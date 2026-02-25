@@ -1,36 +1,48 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://base64converter.tools'),
-  title: 'Base64 Encoder & Decoder — Free Online Tool',
-  description: 'Encode and decode Base64 strings and files online. Free Base64 converter tool with file support. No registration, 100% private.',
-  keywords: ['base64 encode', 'base64 decode', 'base64 converter', 'online base64', 'file to base64'],
+  metadataBase: new URL('https://base64-converter.vercel.app'),
+  title: 'Base64 Converter — Encode & Decode | Free Online Tool',
+  description: 'Convert text to Base64 and decode Base64 to text. Free online Base64 encoder and decoder for developers.',
+  keywords: ['base64 converter', 'base64 encoder', 'base64 decoder', 'base64 encode', 'base64 decode'],
+  authors: [{ name: 'SmartOK Tools' }],
   openGraph: {
-    title: 'Base64 Encoder & Decoder',
-    description: 'Encode and decode Base64 strings and files online.',
     type: 'website',
+    locale: 'en_US',
+    url: 'https://base64-converter.vercel.app',
+    siteName: 'Base64 Converter',
+    title: 'Base64 Converter — Encode & Decode',
+    description: 'Convert text to Base64 and decode Base64 to text.',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Base64 Converter',
+    description: 'Convert text to Base64 and decode Base64 to text.',
+  },
+  robots: { index: true, follow: true },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <Script id="schema" type="application/ld+json"
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'SoftwareApplication',
               name: 'Base64 Converter',
               applicationCategory: 'DeveloperApplication',
-              offers: { price: '0', priceCurrency: 'USD' },
+              operatingSystem: 'Any',
+              offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+              featureList: 'Base64 encoding, Base64 decoding, File support, URL-safe Base64',
             })
           }}
         />
       </head>
-      <body>{children}</body>
+      <body className="min-h-screen bg-slate-50">{children}</body>
     </html>
   )
 }
