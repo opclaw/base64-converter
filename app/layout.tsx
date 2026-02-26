@@ -17,11 +17,13 @@ export const metadata: Metadata = {
     siteName: 'Base64 Converter',
     title: 'Base64 Converter — Encode & Decode',
     description: 'Convert text to Base64 and decode Base64 to text.',
+    images: ['/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Base64 Converter',
     description: 'Convert text to Base64 and decode Base64 to text.',
+    images: ['/og-image.svg'],
   },
   robots: { index: true, follow: true },
 }
