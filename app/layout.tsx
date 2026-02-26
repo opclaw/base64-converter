@@ -3,6 +3,9 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://base64-converter.vercel.app'),
+  alternates: {
+    canonical: 'https://base64-converter.vercel.app',
+  },
   title: 'Base64 Converter — Encode & Decode | Free Online Tool',
   description: 'Convert text to Base64 and decode Base64 to text. Free online Base64 encoder and decoder for developers.',
   keywords: ['base64 converter', 'base64 encoder', 'base64 decoder', 'base64 encode', 'base64 decode'],
