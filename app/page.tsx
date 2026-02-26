@@ -63,27 +63,29 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-2xl shadow-lg">🔐</div>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-2xl shadow-lg">🔐</div>
               <div>
                 <span className="text-xl font-bold text-slate-900">Base64 Converter</span>
                 <p className="text-sm text-slate-500">Encode & Decode</p>
               </div>
             </div>
             <nav className="hidden md:flex gap-6">
-              <a href="#tool" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Tool</a>
-              <a href="#features" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Features</a>
-              <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">FAQ</a>
+              <a href="#tool" className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Tool</a>
+              <a href="#features" className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Features</a>
+              <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">FAQ</a>
             </nav>
           </div>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      {/* Hero - Updated with text-gradient and spacing */}
+      <section className="hero">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-3xl shadow-xl mb-6">🔐</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Base64 Converter</h2>
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 text-3xl shadow-xl mb-6">🔐</div>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+              <span className="text-gradient">Base64 Converter</span>
+            </h2>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">Convert text to Base64 and decode Base64 to text instantly. Free, secure, and works entirely in your browser.</p>
           </div>
         </div>
@@ -99,7 +101,7 @@ export default function Home() {
                 onClick={() => { setMode('encode'); setOutput(''); setError(''); }}
                 className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   mode === 'encode' 
-                    ? 'bg-white text-indigo-600 shadow-md' 
+                    ? 'bg-white text-emerald-600 shadow-md' 
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -109,7 +111,7 @@ export default function Home() {
                 onClick={() => { setMode('decode'); setOutput(''); setError(''); }}
                 className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   mode === 'decode' 
-                    ? 'bg-white text-indigo-600 shadow-md' 
+                    ? 'bg-white text-emerald-600 shadow-md' 
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -171,7 +173,7 @@ export default function Home() {
                   {output && (
                     <button 
                       onClick={copyToClipboard}
-                      className="text-xs font-medium text-indigo-600 hover:text-indigo-700"
+                      className="text-xs font-medium text-emerald-600 hover:text-emerald-700"
                     >
                       {copied ? '✓ Copied!' : '📋 Copy'}
                     </button>
@@ -197,11 +199,11 @@ export default function Home() {
           {output && (
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 text-center">
-                <div className="text-2xl font-bold text-indigo-600">{stats.inputChars}</div>
+                <div className="text-2xl font-bold text-emerald-600">{stats.inputChars}</div>
                 <div className="text-xs font-medium text-slate-500 uppercase tracking-wider mt-1">Input Characters</div>
               </div>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 text-center">
-                <div className="text-2xl font-bold text-indigo-600">{stats.outputChars}</div>
+                <div className="text-2xl font-bold text-emerald-600">{stats.outputChars}</div>
                 <div className="text-xs font-medium text-slate-500 uppercase tracking-wider mt-1">Output Characters</div>
               </div>
             </div>
@@ -209,7 +211,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Features */}
+      {/* Features - Updated with hover effects */}
       <section id="features" className="bg-white border-t border-slate-200 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -225,8 +227,8 @@ export default function Home() {
               { icon: '📊', title: 'Character Stats', description: 'See input and output character counts at a glance.' },
               { icon: '💯', title: '100% Free', description: 'No registration, no limits, no watermarks. Completely free.' },
             ].map((f, i) => (
-              <div key={i} className="group p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-100/50 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">{f.icon}</div>
+              <div key={i} className="feature-card p-6 group cursor-pointer">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform duration-300">{f.icon}</div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{f.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{f.description}</p>
               </div>
@@ -248,7 +250,7 @@ export default function Home() {
               { q: 'Is my data secure?', a: 'Absolutely. All processing happens client-side in your browser. Your data is never sent to any server.' },
               { q: 'Can I decode any Base64 string?', a: 'You can decode any valid Base64 string. If the input is not valid Base64, you will see an error message.' },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+              <div key={i} className="card p-6 cursor-pointer">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.q}</h3>
                 <p className="text-slate-600 leading-relaxed">{item.a}</p>
               </div>
@@ -257,12 +259,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12">
+      {/* Footer - Updated to bg-slate-800 */}
+      <footer className="bg-slate-800 text-slate-400 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-lg">🔐</div>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-lg">🔐</div>
               <span className="text-white font-semibold">Base64 Converter</span>
             </div>
             <p className="text-sm">© 2024 SmartOK Tools. Free online tools for everyone.</p>
